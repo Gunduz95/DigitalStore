@@ -1,0 +1,8 @@
+﻿@model IEnumerable<DigitalStore.Models.Category>
+
+<ul class="sidebar">
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink(@item.Name, "Index", "Home", new { category = item.Id }, null) </li>
+    }
+</ul>
